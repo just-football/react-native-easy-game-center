@@ -8,15 +8,15 @@ import com.facebook.react.bridge.Callback;
 
 public class RNReactNativeGameCenterAuthenticationModule extends ReactContextBaseJavaModule {
 
-  private final ReactApplicationContext reactContext;
+    private final ReactApplicationContext reactContext;
 
-  public RNReactNativeGameCenterAuthenticationModule(ReactApplicationContext reactContext) {
-    super(reactContext);
-    this.reactContext = reactContext;
-  }
+    public RNReactNativeGameCenterAuthenticationModule(ReactApplicationContext reactContext) {
+        super(reactContext);
+        this.reactContext = reactContext;
+    }
 
-  @Override
-  public String getName() {
-    return "RNReactNativeGameCenterAuthentication";
-  }
+    @Override
+    public String getName() {
+        return "RNReactNativeGameCenterAuthentication";
+    }
 }
