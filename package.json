@@ -3,7 +3,8 @@
 	"description": "Game Center and Google Play Games authentication for React Native",
 	"author": "Ludvig Larsendahl <ludvig@justfootballapp.com>",
 	"version": "0.0.1",
-	"main": "main.js",
+	"main": "index.js",
+	"types": "index.d.ts",
 	"devDependencies": {
 		"babel-jest": "21.2.0",
 		"babel-preset-react-native": "4.0.0",
