@@ -23,7 +23,11 @@ public class RNReactNativeGameCenterAuthenticationModule extends ReactContextBas
     }
 
     @ReactMethod
-    public void authenticate() {
+    public void authenticate(
+        Callback errorCallback,
+        Callback successCallback
+    ) {
         Log.v("kek", "Auth yolo swag kek");
+        successCallback.invoke("authboyeee");
     }
 }
