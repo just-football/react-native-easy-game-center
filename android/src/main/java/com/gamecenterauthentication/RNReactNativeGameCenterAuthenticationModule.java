@@ -26,7 +26,7 @@ public class RNReactNativeGameCenterAuthenticationModule extends ReactContextBas
         Callback successCallback
     ) {
         RNReactNativeGameCenterAuthentication auth = new RNReactNativeGameCenterAuthentication();
-        successCallback(auth.authenticate());
+        successCallback.invoke(auth.authenticate());
         
     }
 }
