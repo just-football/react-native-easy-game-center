@@ -6,8 +6,6 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.Callback;
 
-import android.util.Log;
-
 public class RNReactNativeGameCenterAuthenticationModule extends ReactContextBaseJavaModule {
 
     private final ReactApplicationContext reactContext;
@@ -27,7 +25,8 @@ public class RNReactNativeGameCenterAuthenticationModule extends ReactContextBas
         Callback errorCallback,
         Callback successCallback
     ) {
-        Log.v("kek", "Auth yolo swag kek");
-        successCallback.invoke("authboyeee");
+        RNReactNativeGameCenterAuthentication auth = new RNReactNativeGameCenterAuthentication();
+        successCallback(auth.authenticate());
+        
     }
 }

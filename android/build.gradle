@@ -31,6 +31,7 @@ repositories {
 }
 
 dependencies {
+    compile project(':BaseGameUtils')
     compile 'com.facebook.react:react-native:+'
 }
   
