@@ -8,4 +8,6 @@ declare module 'react-native-game-center-authentication' {
     export class GCAuth {
         authenticate: () => Promise<GameCenterUser>;
     }
+    
+    export default GCAuth;
 }
