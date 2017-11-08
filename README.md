@@ -1,16 +1,16 @@
-# react-native-game-center-authentication
+# react-native-game-center-auth
 
 ## Getting started
 
-`npm install react-native-game-center-authentication --save` 
+`npm install react-native-game-center-auth --save` 
 
 or 
 
-`yarn add react-native-game-center-authentication`
+`yarn add react-native-game-center-auth`
 
 ### Automatic installation
 
-`react-native link react-native-game-center-authentication`
+`react-native link react-native-game-center-auth`
 
 ### Manual installation
 
