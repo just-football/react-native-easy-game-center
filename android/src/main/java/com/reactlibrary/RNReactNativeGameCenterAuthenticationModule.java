@@ -19,4 +19,9 @@ public class RNReactNativeGameCenterAuthenticationModule extends ReactContextBas
     public String getName() {
         return "RNReactNativeGameCenterAuthentication";
     }
+
+    @ReactMethod
+    public void authenticate() {
+        print("Auth yolo swag kek");
+    }
 }
