@@ -10,8 +10,6 @@ buildscript {
     }
 }
 
-apply plugin: 'com.android.library'
-
 android {
     compileSdkVersion 23
     buildToolsVersion "23.0.1"
@@ -33,6 +31,7 @@ repositories {
 
 dependencies {
     compile 'com.facebook.react:react-native:+'
-    compile project(':BaseGameUtils')
+    compile 'com.google.android.gms:play-services-base:11.+'
+    // compile project(':BaseGameUtils')
 }
   

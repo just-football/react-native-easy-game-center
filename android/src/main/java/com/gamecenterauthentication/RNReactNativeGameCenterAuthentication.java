@@ -1,11 +1,12 @@
 package com.gamecenterauthentication;
 
-//import android.util.Log;
-//import com.google.android.gms.*;
-//import com.google.example.games.basegameutils.BaseGameUtils;
+import com.google.android.gms.common.api.GoogleApiClient;
 
 public class RNReactNativeGameCenterAuthentication {
+    private GoogleApiClient mClient;
+
     public String authenticate() {
+        print("KEK", this.mClient.isConnected());
         return "kek";
     }
 }
