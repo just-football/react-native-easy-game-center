@@ -1,3 +1,4 @@
+apply plugin: 'com.android.library'
 
 buildscript {
     repositories {
@@ -31,7 +32,20 @@ repositories {
 }
 
 dependencies {
-    compile project(':BaseGameUtils')
     compile 'com.facebook.react:react-native:+'
+    if (!project.hasProperty('appcompat_library_version')) {
+        ext.appcompat_library_version = '20.0.+'
+    }
+    if (!project.hasProperty('support_library_version')) {
+        ext.support_library_version = '20.0.+'
+    }
+    if (!project.hasProperty('gms_library_version')) {
+        ext.gms_library_version = '8.4.0'
+    }
+
+    compile "com.android.support:appcompat-v7:${appcompat_library_version}"
+    compile "com.android.support:support-v4:${support_library_version}"
+    compile "com.google.android.gms:play-services-games:${gms_library_version}"
+    compile "com.google.android.gms:play-services-plus:${gms_library_version}"
 }
   
