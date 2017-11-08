@@ -1,8 +1,8 @@
 {
 	"name": "react-native-gamecenter-auth",
-	"description": "Game Center and Google Play Games authentication for React Native",
+	"description": "Game Center authentication for React Native",
 	"author": "Ludvig Larsendahl <ludvig@justfootballapp.com>",
-	"version": "0.0.1",
+	"version": "1.0.0",
 	"main": "index.js",
 	"types": "index.d.ts",
 	"devDependencies": {
