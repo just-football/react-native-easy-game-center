@@ -1,10 +1,12 @@
 
-package com.reactlibrary;
+package com.gamecenterauthentication;
 
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.Callback;
+
+import android.util.Log;
 
 public class RNReactNativeGameCenterAuthenticationModule extends ReactContextBaseJavaModule {
 
@@ -22,6 +24,6 @@ public class RNReactNativeGameCenterAuthenticationModule extends ReactContextBas
 
     @ReactMethod
     public void authenticate() {
-        print("Auth yolo swag kek");
+        Log.v("kek", "Auth yolo swag kek");
     }
 }
