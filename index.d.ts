@@ -1,4 +1,4 @@
-declare module 'react-native-game-center-authentication' {
+declare module 'react-native-game-center-auth' {
     export interface GameCenterUser {
         playerID: string;
         displayName: string;
