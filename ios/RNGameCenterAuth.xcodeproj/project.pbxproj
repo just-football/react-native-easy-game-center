@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B3E7B58A1CC2AC0600A0062D /* RNReactNativeGameCenterAuthenticationBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* RNReactNativeGameCenterAuthenticationBridge.m */; };
-		B56CEC3A1FB1C97100433C81 /* RNReactNativeGameCenterAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56CEC391FB1C97100433C81 /* RNReactNativeGameCenterAuthentication.swift */; };
+		66F1CEEF1FC5878F008C4052 /* RNGameCenterAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F1CEED1FC5878F008C4052 /* RNGameCenterAuth.swift */; };
+		66F1CEF01FC5878F008C4052 /* RNGameCenterAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = 66F1CEEE1FC5878F008C4052 /* RNGameCenterAuth.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,10 +24,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		134814201AA4EA6300B7C361 /* libRNReactNativeGameCenterAuthentication.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNReactNativeGameCenterAuthentication.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		B3E7B5891CC2AC0600A0062D /* RNReactNativeGameCenterAuthenticationBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNReactNativeGameCenterAuthenticationBridge.m; sourceTree = "<group>"; };
-		B56CEC361FB1C92E00433C81 /* RNReactNativeGameCenterAuthentication-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RNReactNativeGameCenterAuthentication-Bridging-Header.h"; sourceTree = "<group>"; };
-		B56CEC391FB1C97100433C81 /* RNReactNativeGameCenterAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNReactNativeGameCenterAuthentication.swift; sourceTree = "<group>"; };
+		134814201AA4EA6300B7C361 /* libRNGameCenterAuth.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNGameCenterAuth.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		66F1CEEC1FC5878E008C4052 /* RNGameCenterAuth-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RNGameCenterAuth-Bridging-Header.h"; sourceTree = "<group>"; };
+		66F1CEED1FC5878F008C4052 /* RNGameCenterAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNGameCenterAuth.swift; sourceTree = "<group>"; };
+		66F1CEEE1FC5878F008C4052 /* RNGameCenterAuth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNGameCenterAuth.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,7 +44,7 @@
 		134814211AA4EA7D00B7C361 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				134814201AA4EA6300B7C361 /* libRNReactNativeGameCenterAuthentication.a */,
+				134814201AA4EA6300B7C361 /* libRNGameCenterAuth.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -52,19 +52,19 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
-				B56CEC391FB1C97100433C81 /* RNReactNativeGameCenterAuthentication.swift */,
-				B56CEC361FB1C92E00433C81 /* RNReactNativeGameCenterAuthentication-Bridging-Header.h */,
-				B3E7B5891CC2AC0600A0062D /* RNReactNativeGameCenterAuthenticationBridge.m */,
+				66F1CEEE1FC5878F008C4052 /* RNGameCenterAuth.m */,
+				66F1CEED1FC5878F008C4052 /* RNGameCenterAuth.swift */,
 				134814211AA4EA7D00B7C361 /* Products */,
+				66F1CEEC1FC5878E008C4052 /* RNGameCenterAuth-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		58B511DA1A9E6C8500147676 /* RNReactNativeGameCenterAuthentication */ = {
+		58B511DA1A9E6C8500147676 /* RNGameCenterAuth */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 58B511EF1A9E6C8500147676 /* Build configuration list for PBXNativeTarget "RNReactNativeGameCenterAuthentication" */;
+			buildConfigurationList = 58B511EF1A9E6C8500147676 /* Build configuration list for PBXNativeTarget "RNGameCenterAuth" */;
 			buildPhases = (
 				58B511D71A9E6C8500147676 /* Sources */,
 				58B511D81A9E6C8500147676 /* Frameworks */,
@@ -74,9 +74,9 @@
 			);
 			dependencies = (
 			);
-			name = RNReactNativeGameCenterAuthentication;
+			name = RNGameCenterAuth;
 			productName = RCTDataManager;
-			productReference = 134814201AA4EA6300B7C361 /* libRNReactNativeGameCenterAuthentication.a */;
+			productReference = 134814201AA4EA6300B7C361 /* libRNGameCenterAuth.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -94,7 +94,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 58B511D61A9E6C8500147676 /* Build configuration list for PBXProject "RNReactNativeGameCenterAuthentication" */;
+			buildConfigurationList = 58B511D61A9E6C8500147676 /* Build configuration list for PBXProject "RNGameCenterAuth" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -106,7 +106,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				58B511DA1A9E6C8500147676 /* RNReactNativeGameCenterAuthentication */,
+				58B511DA1A9E6C8500147676 /* RNGameCenterAuth */,
 			);
 		};
 /* End PBXProject section */
@@ -116,8 +116,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3E7B58A1CC2AC0600A0062D /* RNReactNativeGameCenterAuthenticationBridge.m in Sources */,
-				B56CEC3A1FB1C97100433C81 /* RNReactNativeGameCenterAuthentication.swift in Sources */,
+				66F1CEEF1FC5878F008C4052 /* RNGameCenterAuth.swift in Sources */,
+				66F1CEF01FC5878F008C4052 /* RNGameCenterAuth.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,9 +218,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = RNReactNativeGameCenterAuthentication;
+				PRODUCT_NAME = RNGameCenterAuth;
 				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "RNReactNativeGameCenterAuthentication-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "RNGameCenterAuth-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
@@ -239,9 +239,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = RNReactNativeGameCenterAuthentication;
+				PRODUCT_NAME = RNGameCenterAuth;
 				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "RNReactNativeGameCenterAuthentication-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "RNGameCenterAuth-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -249,7 +249,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		58B511D61A9E6C8500147676 /* Build configuration list for PBXProject "RNReactNativeGameCenterAuthentication" */ = {
+		58B511D61A9E6C8500147676 /* Build configuration list for PBXProject "RNGameCenterAuth" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				58B511ED1A9E6C8500147676 /* Debug */,
@@ -258,7 +258,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		58B511EF1A9E6C8500147676 /* Build configuration list for PBXNativeTarget "RNReactNativeGameCenterAuthentication" */ = {
+		58B511EF1A9E6C8500147676 /* Build configuration list for PBXNativeTarget "RNGameCenterAuth" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				58B511F01A9E6C8500147676 /* Debug */,
