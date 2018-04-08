@@ -22,18 +22,14 @@ class RNGameCenterAuth: RCTEventEmitter {
         // Root React Native View
         let rnView = UIApplication.shared.keyWindow?.rootViewController
 
-        // GC User Object
-        let localPlayer: GKLocalPlayer = GKLocalPlayer.localPlayer()
-
-        if (localPlayer.isAuthenticated) {
-            self.success(gcPlayer: localPlayer)
-        }
-
-        localPlayer.authenticateHandler = {(GameCenterManager, error) -> Void in
-            if (GameCenterManager != nil) {
-                rnView!.present(GameCenterManager!, animated: true, completion: nil)
-            } else if (localPlayer.isAuthenticated) {
-                self.success(gcPlayer: localPlayer)
+        // Fixing?
+        GKLocalPlayer.localPlayer().authenticateHandler={(gameCenterVC, gameCenterError) -> Void in
+            if gameCenterVC != nil {
+                rnView!.present(gameCenterVC!, animated: true, completion: { () -> Void in
+                    // Do nothing on view load
+                })
+            } else if GKLocalPlayer.localPlayer().isAuthenticated {
+                self.success(gcPlayer: GKLocalPlayer.localPlayer())
             } else {
                 self.fail()
             }
@@ -41,17 +37,19 @@ class RNGameCenterAuth: RCTEventEmitter {
     }
 
     func fail() -> Void {
-        self.sendEvent(withName: self.GAME_CENTER_COMPLETE, body: [
-            "error": true
-            ])
+        self.sendEvent(
+            withName: self.GAME_CENTER_COMPLETE,
+            body: ["error": true]
+        )
     }
 
     func success(gcPlayer: GKLocalPlayer) -> Void {
-        let player: [String:Any] =  [
+        let player: [String:Any] = [
             "playerID": gcPlayer.playerID as String!,
             "displayName": gcPlayer.displayName as String!,
             "alias": gcPlayer.alias as String!
         ]
+
         self.sendEvent(withName: self.GAME_CENTER_COMPLETE, body: player)
     }
 }
