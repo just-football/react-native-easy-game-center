@@ -5,9 +5,12 @@ declare module 'react-native-easy-game-center' {
         alias: string;
     }
 
-    export class GCAuth {
-        authenticate: () => Promise<GameCenterUser>;
+    interface EGC {
+        setup: () => Promise<void>;
+        isAuthenticated: () => Promise<boolean>;
+        getPlayer: () => Promise<GameCenterUser>;
+        loginPlayerToGameCenter: () => Promise<boolean>;
     }
 
-    export default GCAuth;
+    export default EGC;
 }
