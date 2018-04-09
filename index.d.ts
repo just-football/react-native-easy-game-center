@@ -4,8 +4,13 @@ declare module 'react-native-easy-game-center' {
         displayName: string;
         alias: string;
     }
-    export function setup(): Promise<void>;
-    export function isAuthenticated(): Promise<boolean>;
-    export function getPlayer(): Promise<GameCenterUser>;
-    export function loginPlayerToGameCenter(): Promise<boolean>;
+
+    class Client {
+        setup(): Promise<void>;
+        loginPlayerToGameCenter(): Promise<void>;
+        isAuthenticated(): Promise<boolean>;
+        getPlayer(): Promise<GameCenterUser>;
+    }
+
+    export default new Client;
 }
