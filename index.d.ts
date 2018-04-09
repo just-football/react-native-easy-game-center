@@ -1,4 +1,4 @@
-declare module 'react-native-game-center-auth' {
+declare module 'react-native-easy-game-center' {
     export interface GameCenterUser {
         playerID: string;
         displayName: string;
@@ -8,6 +8,6 @@ declare module 'react-native-game-center-auth' {
     export class GCAuth {
         authenticate: () => Promise<GameCenterUser>;
     }
-    
+
     export default GCAuth;
 }

@@ -10,46 +10,44 @@ import Foundation
 import GameKit
 
 @objc(RNGameCenterAuth)
-class RNGameCenterAuth: RCTEventEmitter {
+class RNGameCenterAuth: NSObject {
+    @objc func setup(_ resolve: RCTPromiseResolveBlock, rejecter reject: RCTPromiseRejectBlock) -> Void {
+        guard let rnView = UIApplication.shared.keyWindow?.rootViewController else {
+            return reject("ReactNativeEasyGameCenter", "no main root view", nil)
+        }
 
-    let GAME_CENTER_COMPLETE = "GameCenterComplete"
-
-    override func supportedEvents() -> [String]! {
-        return [self.GAME_CENTER_COMPLETE]
+        EGC.sharedInstance(rnView)
+        EGC.debugMode = true
+        resolve(nil)
     }
 
-    @objc func authenticate() -> Void {
-        // Root React Native View
-        let rnView = UIApplication.shared.keyWindow?.rootViewController
+    @objc func isAuthenticated(_ resolve: RCTPromiseResolveBlock, rejecter reject: RCTPromiseRejectBlock) -> Void {
+        resolve(EGC.isPlayerIdentified)
+    }
 
-        // Fixing?
-        GKLocalPlayer.localPlayer().authenticateHandler={(gameCenterVC, gameCenterError) -> Void in
-            if gameCenterVC != nil {
-                rnView!.present(gameCenterVC!, animated: true, completion: { () -> Void in
-                    // Do nothing on view load
-                })
-            } else if GKLocalPlayer.localPlayer().isAuthenticated {
-                self.success(gcPlayer: GKLocalPlayer.localPlayer())
+    @objc func getPlayer(_ resolve: RCTPromiseResolveBlock, rejecter reject: RCTPromiseRejectBlock) -> Void {
+        var dict:[String:String] = [:]
+
+        dict["playerID"] = EGC.localPayer.playerID
+
+        resolve(dict)
+    }
+
+    @objc func loginPlayerToGameCenter(_ resolve: @escaping RCTPromiseResolveBlock, rejecter reject: @escaping RCTPromiseRejectBlock) -> Void {
+        var called = false
+
+        EGC.loginPlayerToGameCenter { worked in
+            guard called == false else {
+                return
+            }
+
+            called = true
+
+            if worked! {
+                return resolve(worked!)
             } else {
-                self.fail()
+                return reject("ReactNativeEasyGameCenter", "login failed", nil)
             }
         }
-    }
-
-    func fail() -> Void {
-        self.sendEvent(
-            withName: self.GAME_CENTER_COMPLETE,
-            body: ["error": true]
-        )
-    }
-
-    func success(gcPlayer: GKLocalPlayer) -> Void {
-        let player: [String:Any] = [
-            "playerID": gcPlayer.playerID as String!,
-            "displayName": gcPlayer.displayName as String!,
-            "alias": gcPlayer.alias as String!
-        ]
-
-        self.sendEvent(withName: self.GAME_CENTER_COMPLETE, body: player)
     }
 }

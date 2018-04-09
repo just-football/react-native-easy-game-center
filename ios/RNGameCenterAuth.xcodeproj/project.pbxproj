@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		66C52809207A2CF70060B79C /* EasyGameCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C52808207A2CF70060B79C /* EasyGameCenter.swift */; };
 		66F1CEEF1FC5878F008C4052 /* RNGameCenterAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F1CEED1FC5878F008C4052 /* RNGameCenterAuth.swift */; };
 		66F1CEF01FC5878F008C4052 /* RNGameCenterAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = 66F1CEEE1FC5878F008C4052 /* RNGameCenterAuth.m */; };
 /* End PBXBuildFile section */
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libRNGameCenterAuth.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNGameCenterAuth.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		66C52808207A2CF70060B79C /* EasyGameCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyGameCenter.swift; sourceTree = "<group>"; };
 		66F1CEEC1FC5878E008C4052 /* RNGameCenterAuth-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RNGameCenterAuth-Bridging-Header.h"; sourceTree = "<group>"; };
 		66F1CEED1FC5878F008C4052 /* RNGameCenterAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNGameCenterAuth.swift; sourceTree = "<group>"; };
 		66F1CEEE1FC5878F008C4052 /* RNGameCenterAuth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNGameCenterAuth.m; sourceTree = "<group>"; };
@@ -52,6 +54,7 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
+				66C52808207A2CF70060B79C /* EasyGameCenter.swift */,
 				66F1CEEE1FC5878F008C4052 /* RNGameCenterAuth.m */,
 				66F1CEED1FC5878F008C4052 /* RNGameCenterAuth.swift */,
 				134814211AA4EA7D00B7C361 /* Products */,
@@ -118,6 +121,7 @@
 			files = (
 				66F1CEEF1FC5878F008C4052 /* RNGameCenterAuth.swift in Sources */,
 				66F1CEF01FC5878F008C4052 /* RNGameCenterAuth.m in Sources */,
+				66C52809207A2CF70060B79C /* EasyGameCenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
