@@ -1,5 +1,5 @@
 import { NativeModules } from 'react-native';
 
-const { RNGameCenterAuth } = NativeModules;
+const { RNEasyGameCenter } = NativeModules;
 
-export default RNGameCenterAuth;
+export default RNEasyGameCenter;
