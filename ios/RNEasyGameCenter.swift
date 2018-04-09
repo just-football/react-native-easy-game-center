@@ -12,8 +12,6 @@ import GameKit
 @objc(RNEasyGameCenter)
 class RNEasyGameCenter: NSObject {
     @objc func setup(_ resolve: RCTPromiseResolveBlock, rejecter reject: RCTPromiseRejectBlock) -> Void {
-        
-        print(" calling sety")
         guard let rnView = UIApplication.shared.keyWindow?.rootViewController else {
             return reject("ReactNativeEasyGameCenter", "no main root view", nil)
         }
