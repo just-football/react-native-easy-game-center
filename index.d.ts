@@ -4,13 +4,8 @@ declare module 'react-native-easy-game-center' {
         displayName: string;
         alias: string;
     }
-
-    interface EGC {
-        setup: () => Promise<void>;
-        isAuthenticated: () => Promise<boolean>;
-        getPlayer: () => Promise<GameCenterUser>;
-        loginPlayerToGameCenter: () => Promise<boolean>;
-    }
-
-    export default EGC;
+    export function setup(): Promise<void>;
+    export function isAuthenticated(): Promise<boolean>;
+    export function getPlayer(): Promise<GameCenterUser>;
+    export function loginPlayerToGameCenter(): Promise<boolean>;
 }
