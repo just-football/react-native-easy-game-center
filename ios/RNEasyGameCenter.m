@@ -2,7 +2,7 @@
 #import <React/RCTBridgeModule.h>
 #import <React/RCTModuleMethod.h>
 
-@interface RCT_EXTERN_MODULE(RNGameCenterAuth, NSObject)
+@interface RCT_EXTERN_MODULE(RNEasyGameCenter, NSObject)
 
 RCT_EXTERN_METHOD(
     isAuthenticated:(RCTPromiseResolveBlock)resolve

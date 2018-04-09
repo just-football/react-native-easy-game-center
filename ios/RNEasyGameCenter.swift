@@ -9,8 +9,8 @@
 import Foundation
 import GameKit
 
-@objc(RNGameCenterAuth)
-class RNGameCenterAuth: NSObject {
+@objc(RNEasyGameCenter)
+class RNEasyGameCenter: NSObject {
     @objc func setup(_ resolve: RCTPromiseResolveBlock, rejecter reject: RCTPromiseRejectBlock) -> Void {
         
         print(" calling sety")
